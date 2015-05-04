@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<style>
+<!--
+.scrollerstyle{font-family:webdings;background:#FFFFFF;border:1px solid #999999;cursor:hand;}
+-->
+</style>
+</head>
+<body>
+
+<table border=0 style="width:780px;">
+<tr>
+<td id="headerL">
+<a href="<{$xoops_url}>/index.php"><img src="<{$xoops_imageurl}>logo.gif" style="float:left;"></a>
+</td>
+<td id="headerR">
+<script language="javascript">
+
+ var msgs = new Array(
+     "Accueil",
+     "News",
+	 "Manchettes RSS",
+     "Forums",
+     "Téléchargement",
+     "Liens Web",
+     "Blogs",
+     "Calendrier",
+     "Contact",
+	 "Recommandez-moi",
+	 "Plan du Site" );
+
+ var msg_url = new Array(
+     "<{$xoops_url}>/",
+     "<{$xoops_url}>/modules/news/",
+	 "<{$xoops_url}>/modules/xhld0/",
+     "<{$xoops_url}>/modules/newbb/",
+     "<{$xoops_url}>/modules/wfdownloads/",
+     "<{$xoops_url}>/modules/wflinks/",
+     "<{$xoops_url}>/modules/webblog/",
+     "<{$xoops_url}>/modules/extcal/",
+     "<{$xoops_url}>/modules/contact/",
+	 "<{$xoops_url}>/modules/recommander/",
+	 "<{$xoops_url}>/modules/sitemap/");
+
+var barwidth='180px'
+var setdelay=2000 
+var mouseover_color='#F4F8FB'
+var mouseout_color='#FFFFFF'
+
+var count=0;
+var ns6=document.getElementById&&!document.all
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+
+if (ie4||ns6){
+document.write('<form name="news_bar"><input type="button" value="3" onclick="moveit(0)" class="scrollerstyle" style="width:22px; height:22px; border-right-width:0px;" name="prev" title="Previous News"><input type="button" name="news_bar_but" onclick="goURL();" style="color:#000000; background:#FFFFFF; width:'+barwidth+'; height:22px; border:1px solid #999999; cursor:hand" onmouseover="this.style.background=mouseover_color" onmouseout="this.style.background=mouseout_color"><input type="button" value="4" onclick="moveit(1)" class="scrollerstyle" style="width:22px; height:22px; border-left-width:0px;" name="next" title="Next News"></form>');
+}
+else{
+document.write('<form name="news_bar"><input type="button" value="Previous" onclick="moveit(0)">')
+if (navigator.userAgent.indexOf("Opera")!=-1)
+document.write('<input type="button" name="news_bar_but" onclick="goURL();" style="width:'+barwidth+'" border="0">')
+else
+document.write('<input type="button" name="news_bar_but" onclick="goURL();" width="'+barwidth+'" border="0">')
+document.write('<input type="button" value="Next" onclick="moveit(1)"></form>')
+}
+
+function init_news_bar(){
+  document.news_bar.news_bar_but.value=msgs[count];
+}
+//moveit function by Dynamicdrive.com
+function moveit(how){
+if (how==1){ //cycle foward
+if (count<msgs.length-1)
+count++
+else
+count=0
+}
+else{ //cycle backward
+if (count==0)
+count=msgs.length-1
+else
+count--
+}
+document.news_bar.news_bar_but.value=msgs[count];
+}
+
+setInterval("moveit(1)",setdelay)
+
+function goURL(){
+ location.href=msg_url[count];
+}
+
+init_news_bar();
+
+</script>
+</tr>
+</table>
+
+<table cellspacing="0" style="width:780px;">
+	<tr>
+	<td id="leftcolumn">
+
+	<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	simg=new Array(9);
+	simg[0]="<{$xoops_imageurl}>xoopkun/x1.gif";
+	simg[1]="<{$xoops_imageurl}>xoopkun/x2.gif";
+	simg[2]="<{$xoops_imageurl}>xoopkun/x3.gif";
+	simg[3]="<{$xoops_imageurl}>xoopkun/x4.gif";
+	simg[4]="<{$xoops_imageurl}>xoopkun/x5.gif";
+	simg[5]="<{$xoops_imageurl}>xoopkun/x6.gif";
+	simg[6]="<{$xoops_imageurl}>xoopkun/x7.gif";
+	simg[7]="<{$xoops_imageurl}>xoopkun/x8.gif";
+	simg[8]="<{$xoops_imageurl}>xoopkun/x9.gif";
+	Myimg=Math.floor(4*Math.random());
+	document.write("<img src='"+simg[Myimg]+"'>");
+	//-->
+	</SCRIPT>
+
+	<img src="<{$xoops_imageurl}>dot.gif" width="15" height="15" />
+
+		<{foreach item=block from=$xoops_lblocks}>
+		<{if $block.title|regex_replace:"/.*none/":"none" ne "none"}>
+		<div class="blockTitle"><{$block.title}></div>
+		<{/if}>
+		<div class="blockContent"><{$block.content}></div>
+		<br style="font-size:6px;">
+	<{/foreach}>
+
+<{if $xoops_showrblock == 1}>
+
+	<{foreach item=block from=$xoops_rblocks}>
+		<{if $block.title|regex_replace:"/.*none/":"none" ne "none"}>
+		<div class="blockTitle"><{$block.title}></div>
+		<{/if}>
+		<div class="blockContent"><{$block.content}></div><br>
+	<{/foreach}>
+
+<{/if}>
+	</td>
+
+	<td id="centercolumn">
+
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+            <{foreach item=block from=$xoops_ccblocks}>
+			<{if $block.title|regex_replace:"/.*none/":"none" ne "none"}>
+			<div class="blockTitle"><{$block.title}></div>
+			<{/if}>
+			<div class="blockContent"><{$block.content}></div>
+            <{/foreach}>
+            </td>
+          </tr>
+          <tr>
+
+            <td id="centerLcolumn">
+            <{foreach item=block from=$xoops_clblocks}>
+			<{if $block.title|regex_replace:"/.*none/":"none" ne "none"}>
+				<div class="blockTitle"><{$block.title}></div>
+			<{/if}>
+				<div class="blockContent"><{$block.content}></div>
+            <{/foreach}>
+            </td>
+
+			<td id="centerRcolumn">
+              <{foreach item=block from=$xoops_crblocks}>
+			<{if $block.title|regex_replace:"/.*none/":"none" ne "none"}>
+				<div class="blockTitle"><{$block.title}></div>
+			<{/if}>
+				<div class="blockContent"><{$block.content}></div>
+              <{/foreach}>
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+      </td>
+    </tr>
+</table>
+
+<table cellspacing="0" style="width:780px;">
+    <tr>
+    <td id="footerbar">
+      Powered by <a href="http://www.frxoops.org/" target=_blank>XOOPS</a> Designed by <a href="http://www.oceannet.jp/" target=_blank>OCEAN-NET</a><br>Copyright(c)2004 All rights reserved. 	</td>
+    </tr>
+</table>
+</body>
+</html>
